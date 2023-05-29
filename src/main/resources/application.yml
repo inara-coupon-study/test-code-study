@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    hikari:
+      driver-class-name: org.h2.Driver
+#      http://localhost:8080/h2-console/ 으로 접속
+      jdbc-url: jdbc:h2:mem:unittesting;MODE=MySQL;TIME ZONE=UTC
+      username: sa
+      password:
+  jpa:
+    database: h2
+    properties:
+      hibernate:
+        show_sql: true
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8082
